@@ -1,0 +1,167 @@
+configuration {
+    modes: "combi";
+    combi-modes: "window,run,drun";
+    drun-display-format: "{name}";
+    window-format: "{t:45}  ·  {c}";
+    font: "FiraCode Nerd Font Mono 13";
+    fixed-num-lines: true;
+    show-icons: true;
+    sort: true;
+    sorting-method: "normal";
+    click-to-exit: true;
+    combi-hide-mode-prefix: true;
+    display-drun: "";
+}
+
+* {
+    bg: #00000020;
+    bg-hover: #242832FF;
+    bg-selected: #7AA2F725;
+    fg: #E6EAF2FF;
+    fg-muted: #8B93A7FF;
+    fg-dark: #111318FF;
+    accent: #7AA2F7FF;
+    accent-soft: #7AA2F733;
+    urgent: #F7768EFF;
+    border-color: #FFFFFF00;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    location: center;
+    width: 420px;
+    height: 420px;
+    background-color: @bg;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 18px;
+    padding: 10;
+}
+
+mainbox {
+    orientation: vertical;
+    background-color: transparent;
+    spacing: 12px;
+}
+
+inputbar {
+    background-color: #FFFFFF18;
+    border: 1px;
+    border-color: @border-color;
+    border-radius: 12px;
+    padding: 5px 15px;
+    spacing: 12px;
+    children: [prompt, entry];
+}
+
+prompt {
+    enabled: true;
+    background-color: transparent;
+    text-color: @accent;
+    font: "FiraCode Nerd Font Mono 16";
+    padding: 0;
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    font: "FiraCode Nerd Font Mono 14";
+    placeholder: "";
+    placeholder-color: @fg-muted;
+    padding: 0;
+    vertical-align: 0.5;
+    horizontal-align: 0;
+}
+
+listview {
+    background-color: transparent;
+    border: 0;
+    spacing: 6px;
+    padding: 4px 0;
+    lines: 8;
+    columns: 1;
+    fixed-height: true;
+    scrollbar: true;
+}
+
+element {
+    background-color: transparent;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    spacing: 14px;
+}
+
+element-icon {
+    size: 28px;
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    font: "FiraCode Nerd Font Mono 11";
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element normal.active,
+element alternate.active {
+    background-color: transparent;
+    text-color: @accent;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color: transparent;
+    text-color: @urgent;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: @bg-selected;
+    text-color: @fg;
+}
+
+
+
+element selected.urgent {
+    background-color: @urgent;
+    text-color: @fg-dark;
+}
+
+
+
+message {
+    background-color: transparent;
+    border: 0;
+    padding: 4px 8px;
+    text-color: @fg-muted;
+}
+
+textbox {
+    background-color: transparent;
+    text-color: @fg-muted;
+    horizontal-align: 0.0;
+}
+
+scrollbar {
+    width: 4px;
+    border: 0;
+    handle-color: @fg-muted;
+    handle-width: 4px;
+    background-color: #FFFFFF18; 
+    padding: 0;
+}
+
+
